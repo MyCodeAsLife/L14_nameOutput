@@ -12,17 +12,16 @@ namespace L14_nameOutput
         {
             string userName;
             char userSymbol;
-            int identation = 4;
+            string identation;
 
             Console.Write("Введите ваше имя: ");
             userName = Console.ReadLine();
             Console.Write("Введите желаемый символ: ");
             userSymbol = Convert.ToChar(Console.Read());
-
+            userName = $"{userSymbol} " + userName + $" {userSymbol}";
+            identation = new string(userSymbol, userName.Length);
             Console.Clear();
-            Console.WriteLine(new string(userSymbol, userName.Length + identation));
-            Console.WriteLine($"{userSymbol} " + userName + $" {userSymbol}");
-            Console.WriteLine(new string(userSymbol, userName.Length + identation));
+            Console.WriteLine($"{identation}\n{userName}\n{identation}");
         }
     }
 }
