@@ -10,18 +10,19 @@ namespace L14_nameOutput
     {
         static void Main(string[] args)
         {
-            string userName;
             char userSymbol;
-            string identation;
+            string frame;
+            string userName;
+            string formatedInput;
 
             Console.Write("Введите ваше имя: ");
             userName = Console.ReadLine();
             Console.Write("Введите желаемый символ: ");
             userSymbol = Convert.ToChar(Console.Read());
-            userName = $"{userSymbol} " + userName + $" {userSymbol}";
-            identation = new string(userSymbol, userName.Length);
+            formatedInput = $"{userSymbol} " + userName + $" {userSymbol}";
+            frame = new string(userSymbol, formatedInput.Length);
             Console.Clear();
-            Console.WriteLine($"{identation}\n{userName}\n{identation}");
+            Console.WriteLine($"{frame}\n{formatedInput}\n{frame}");
         }
     }
 }
